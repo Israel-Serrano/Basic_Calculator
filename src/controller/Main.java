@@ -1,11 +1,11 @@
 package controller;
 
-import view.PrincipalFrame;
+import view.CalculatorFrame;
 
 public class Main {
 
 	public static void main(String[] args) {
-		PrincipalFrame frame = new PrincipalFrame();
+		CalculatorFrame frame = new CalculatorFrame();
 		EventsController control = new EventsController(frame);
 		frame.controller(control);
 
