@@ -10,7 +10,7 @@ import view.CalculatorFrame;
 public class EventsController implements ActionListener{
 
 		private CalculatorFrame frame;
-		private double x1, x2; 
+		private double n1, n2; 
 
 		public EventsController(CalculatorFrame frame) {
 			this.frame = frame;
@@ -23,50 +23,34 @@ public class EventsController implements ActionListener{
 				
 				if(e.getSource() == frame.getAddition()) {
 					initVarText();
-					frame.getFinalResult().setText(String.valueOf(x1+x2));
+					frame.getFinalResult().setText(String.valueOf(n1+n2));
 					resetAndFocus();
 				}
 				
 				else if(e.getSource() == frame.getMinus()) {
 					initVarText();
-					frame.getFinalResult().setText(String.valueOf(x1-x2));
+					frame.getFinalResult().setText(String.valueOf(n1-n2));
 					resetAndFocus();
 				}
 				
 				else if(e.getSource() == frame.getMultiplication()) {
 					initVarText();
-					frame.getFinalResult().setText(String.valueOf(x1*x2));
+					frame.getFinalResult().setText(String.valueOf(n1*n2));
 					resetAndFocus();
 				}
 				
 				else if(e.getSource() == frame.getDivision()) {
 					initVarText();
-					if(x2 != 0) {						
-						frame.getFinalResult().setText(String.valueOf(x1/x2));
+					if(n2 != 0) {						
+						frame.getFinalResult().setText(String.valueOf(n1/n2));
 						resetAndFocus();
 					}
+					
 					else {
 						JOptionPane.showMessageDialog(frame, "No se puede dividir por 0", "¡ERROR!", 2);
 						resetAndFocus();
 					}
-					//ESTA LA QUEREMOS DEJAR PARA QUE VEA QUE FUNCIONA CON EL INT.
-					/* Funcionalidad con Integer, arrojando excepción y recogiendola.
-					try {
 					
-						int x1 = Integer.parseInt(frame.getTextOne().getText());
-						int x2 = Integer.parseInt(frame.getTextTwo().getText());	
-								
-						frame.getFinalResult().setText(String.valueOf(x1/x2));
-							
-					}catch (ArithmeticException ex) {
-						
-						ex.printStackTrace();
-						JOptionPane.showMessageDialog(frame, "No se puede dividir por 0, imbécil", "¡ERROR!", 2);
-							
-					}
-					
-					resetAndFocus();
-					*/	
 				}
 				
 				else if(e.getSource() == frame.getR2()) {
@@ -78,13 +62,14 @@ public class EventsController implements ActionListener{
 				//SE HA CAMBIANDO LA FORMA DE RECOGER LA INFORMACIÓN A TRAVÉS DE JOPTIONPANE Y SE HA REALIZADO LA RAÍZ EN ESA VENTANA.
 				else if(e.getSource()== frame.getR3()) {
 					
-					String pass = JOptionPane.showInputDialog("Digite la contraseña");
-					if(pass.equals("Raquel")) {
-						String r3Response = JOptionPane.showInputDialog("Inserte un número para calcular su raíz cúbica");
-						double x3 = Double.parseDouble(r3Response);
-						frame.getFinalResult().setText(String.valueOf(Math.cbrt(x3)));
+					String pass = JOptionPane.showInputDialog("Escribe la contraseña");
+					if(pass.equals("Vader")) {
+						String r3Answer = JOptionPane.showInputDialog("Inserte un número para calcular su raíz cúbica");
+						double n3 = Double.parseDouble(r3Answer);
+						frame.getFinalResult().setText(String.valueOf(Math.cbrt(n3)));
 						
 					}
+					
 					else {
 						JOptionPane.showMessageDialog(frame, "Contraseña incorrecta");
 					}
@@ -107,8 +92,8 @@ public class EventsController implements ActionListener{
 		}
 		
 		public void initVarText() {
-			x1 = Double.parseDouble(frame.getTextOne().getText());
-			x2 = Double.parseDouble(frame.getTextTwo().getText());
+			n1 = Double.parseDouble(frame.getTextOne().getText());
+			n2 = Double.parseDouble(frame.getTextTwo().getText());
 		}
 			
 }
