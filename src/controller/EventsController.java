@@ -5,14 +5,14 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
 
-import view.PrincipalFrame;
+import view.CalculatorFrame;
 
 public class EventsController implements ActionListener{
 
-		private PrincipalFrame frame;
+		private CalculatorFrame frame;
 		private double x1, x2; 
 
-		public EventsController(PrincipalFrame frame) {
+		public EventsController(CalculatorFrame frame) {
 			this.frame = frame;
 		}
 
