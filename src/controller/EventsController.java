@@ -84,6 +84,7 @@ public class EventsController implements ActionListener{
 					}
 					
 					else {
+						PlaySound("sounds/error.wav");
 						JOptionPane.showMessageDialog(frame, "Contraseña incorrecta");
 					}
 					
@@ -91,8 +92,9 @@ public class EventsController implements ActionListener{
 				}
 				
 			} catch (NumberFormatException ex) {
+				PlaySound("sounds/error.wav");
 				JOptionPane.showMessageDialog(frame, "Dato insertado incorrecto. \n\n"
-						 + "Recuerde no dejar campos en blanco \n"
+						 + "Recuerda no dejar campos en blanco \n"
 						 + " e introducir valores númericos.", "¡ADVERTENCIA!", 2);
 			}
 
