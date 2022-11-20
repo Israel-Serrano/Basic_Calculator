@@ -53,7 +53,7 @@ public class EventsController implements ActionListener{
 					initVarText();
 					PlaySound("sounds/coolsaber.wav");
 					if(n2 != 0) {						
-						frame.getFinalResult().setText(String.valueOf(n1/n2));
+						frame.getFinalResult().setText(String.valueOf(round(n1/n2)));
 						resetAndFocus();
 					}
 					
@@ -79,7 +79,7 @@ public class EventsController implements ActionListener{
 					if(pass.equals("Vader")) {
 						String r3Answer = JOptionPane.showInputDialog("Inserte un número para calcular su raíz cúbica");
 						double n3 = Double.parseDouble(r3Answer);
-						frame.getFinalResult().setText(String.valueOf(Math.cbrt(n3)));
+						frame.getFinalResult().setText(String.valueOf(round(Math.cbrt(n3))));
 						
 					}
 					
@@ -113,7 +113,12 @@ public class EventsController implements ActionListener{
 			n2 = Double.parseDouble(frame.getTextTwo().getText());
 		}
 		
-		//función para agregar el sonido a los eventos
+		//función para redondear decimales
+		public double round(double num) {
+            return Math.round(num * 100.0)/100.0;
+        }
+		
+		//procedimiento para agregar el sonido a los eventos
 		public void PlaySound(String soundName){
             try {
              AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
