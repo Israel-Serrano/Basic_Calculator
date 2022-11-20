@@ -114,9 +114,9 @@ public class EventsController implements ActionListener{
 		}
 		
 		//función para agregar el sonido a los eventos
-		public void PlaySound(String nombreSonido){
+		public void PlaySound(String soundName){
             try {
-             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(nombreSonido).getAbsoluteFile());
+             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
              Clip clip = AudioSystem.getClip();
              clip.open(audioInputStream);
              clip.start();
