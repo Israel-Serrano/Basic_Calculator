@@ -74,28 +74,22 @@ public class EventsController implements ActionListener{
 				
 				//recoge la información a través de un JOptionPane y se realiza la raíz cúbica en esa ventana
 				else if(e.getSource()== frame.getR3()) {
-					PlaySound("sounds/darth_vader.wav");
-					int cont = 3;
-					do {
+					PlaySound("sounds/darth_vader.wav");		
+					
 												
-						String pass = JOptionPane.showInputDialog("Escribe la contraseña");					
+					String pass = JOptionPane.showInputDialog("Escribe la contraseña");					
 						
-						if(pass.equals("Vader")) {
-							String r3Answer = JOptionPane.showInputDialog("Inserte un número para calcular su raíz cúbica");
-							double n3 = Double.parseDouble(r3Answer);
-							frame.getFinalResult().setText(String.valueOf(round(Math.cbrt(n3))));
+					if(pass.equals("Vader")) {
+						String r3Answer = JOptionPane.showInputDialog("Inserte un número para calcular su raíz cúbica");
+						double n3 = Double.parseDouble(r3Answer);
+						frame.getFinalResult().setText(String.valueOf(round(Math.cbrt(n3))));
 								
-						}
-							
-						else {
+					}else {
 							PlaySound("sounds/error.wav");								
-							cont--;
-							JOptionPane.showMessageDialog(frame, "Contraseña incorrecta \n Te quedan " + cont + " intentos");
+							JOptionPane.showMessageDialog(frame, "Contraseña incorrecta");
 							}
 						
-					}while(cont != 0);
-						
-						resetAndFocus();					
+					resetAndFocus();					
 				}
 				
 			} catch (NumberFormatException ex) {
