@@ -52,39 +52,39 @@ public class CalculatorFrame extends JFrame {
 		numberOne = new JLabel("Número 1 :");
 		numberOne.setBounds(50, 250, 120, 30);
 		numberOne.setFont(new Font("Dialog", Font.BOLD, 14));
-		numberOne.setForeground(Color.RED);
+		numberOne.setForeground(new Color(255, 95, 96));
 		add(numberOne);
 		
 		numberTwo = new JLabel("Número 2 :");
 		numberTwo.setBounds(200, 250, 120, 30);
 		numberTwo.setFont(new Font("Dialog", Font.BOLD, 14));
-		numberTwo.setForeground(Color.RED);
+		numberTwo.setForeground(new Color(255, 95, 96));
 		add(numberTwo);
 		
 		result = new JLabel("Resultado:");
 		result.setBounds(100, 520, 120, 30);
 		result.setFont(new Font("Dialog", Font.BOLD, 14));
-		result.setForeground(Color.RED);
+		result.setForeground(new Color(255, 95, 96));
 		add(result);
 		
 		finalResult = new JLabel();
 		finalResult.setBounds(190, 520, 120, 30);
 		finalResult.setFont(new Font("Dialog", Font.BOLD, 14));
-		finalResult.setForeground(Color.RED);
+		finalResult.setForeground(new Color(255, 95, 96));
 		add(finalResult);
 		
 		//en segundo lugar inicializa los campos de texto
 		textOne = new JTextField();
 		textOne.setBounds(130, 250, 60, 30);
 		textOne.setFont(new Font("Dialog", Font.BOLD, 14));
-		textOne.setForeground(Color.DARK_GRAY);
+		textOne.setForeground(new Color(64, 12, 13));
 		textOne.setBackground(Color.ORANGE);
 		add(textOne);
 				
 		textTwo = new JTextField();
 		textTwo.setBounds(285, 250, 60, 30);
 		textTwo.setFont(new Font("Dialog", Font.BOLD, 14));
-		textTwo.setForeground(Color.DARK_GRAY);
+		textTwo.setForeground(new Color(64, 12, 13));
 		textTwo.setBackground(Color.ORANGE);
 		add(textTwo);
 		
@@ -92,43 +92,43 @@ public class CalculatorFrame extends JFrame {
 		addition = new JButton("SUMAR");
 		addition.setBounds(60, 320, 130, 50);
 		addition.setFont(new Font("Dialog", Font.BOLD, 14));
-		addition.setForeground(Color.DARK_GRAY);
-		addition.setBackground(Color.RED);
+		addition.setForeground(new Color(64, 12, 13));
+		addition.setBackground(new Color(255, 95, 96));
 		add(addition);
 		
 		minus = new JButton("RESTAR");
 		minus.setBounds(220, 320, 130, 50);
 		minus.setFont(new Font("Dialog", Font.BOLD, 14));
-		minus.setForeground(Color.DARK_GRAY);
-		minus.setBackground(Color.RED);
+		minus.setForeground(new Color(64, 12, 13));
+		minus.setBackground(new Color(255, 95, 96));
 		add(minus);
 		
 		multiplication = new JButton("MULTIPLICAR");
 		multiplication.setBounds(60, 380, 130, 50);
 		multiplication.setFont(new Font("Dialog", Font.BOLD, 14));
-		multiplication.setForeground(Color.DARK_GRAY);
-		multiplication.setBackground(Color.RED);
+		multiplication.setForeground(new Color(64, 12, 13));
+		multiplication.setBackground(new Color(255, 95, 96));
 		add(multiplication);
 		
 		division = new JButton("DIVIDIR");
 		division.setBounds(220, 380, 130, 50);
 		division.setFont(new Font("Dialog", Font.BOLD, 14));
-		division.setForeground(Color.DARK_GRAY);
-		division.setBackground(Color.RED);
+		division.setForeground(new Color(64, 12, 13));
+		division.setBackground(new Color(255, 95, 96));
 		add(division);
 		
 		r2 = new JButton("√2");
 		r2.setBounds(60, 440, 130, 50);
 		r2.setFont(new Font("Dialog", Font.BOLD, 14));
-		r2.setForeground(Color.DARK_GRAY);
-		r2.setBackground(Color.RED);
+		r2.setForeground(new Color(64, 12, 13));
+		r2.setBackground(new Color(255, 95, 96));
 		add(r2);
 		
 		r3 = new JButton("√3");
 		r3.setBounds(220, 440, 130, 50);
 		r3.setFont(new Font("Dialog", Font.BOLD, 14));
-		r3.setForeground(Color.DARK_GRAY);
-		r3.setBackground(Color.RED);
+		r3.setForeground(new Color(64, 12, 13));
+		r3.setBackground(new Color(255, 95, 96));
 		add(r3);
 					
 	}
