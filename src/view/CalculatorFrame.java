@@ -63,13 +63,13 @@ public class CalculatorFrame extends JFrame {
 		
 		result = new JLabel("Resultado:");
 		result.setBounds(100, 520, 120, 30);
-		result.setFont(new Font("Dialog", Font.BOLD, 14));
+		result.setFont(new Font("Dialog", Font.BOLD, 20));
 		result.setForeground(new Color(255, 95, 96));
 		add(result);
 		
 		finalResult = new JLabel();
-		finalResult.setBounds(190, 520, 120, 30);
-		finalResult.setFont(new Font("Dialog", Font.BOLD, 14));
+		finalResult.setBounds(220, 520, 120, 30);
+		finalResult.setFont(new Font("Dialog", Font.BOLD, 20));
 		finalResult.setForeground(new Color(255, 95, 96));
 		add(finalResult);
 		
